@@ -41,6 +41,7 @@
   a{color:inherit;}
   img,svg{display:block;max-width:100%;}
   .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .hero-content{position:relative;z-index:2;}
   ::selection{background:var(--brass); color:var(--paper);}
 
   /* ---------- Contour texture (signature motif) ---------- */
@@ -57,6 +58,7 @@
   }
   header.scrolled{
     background:rgba(16,38,42,0.94);
+    -webkit-backdrop-filter:blur(8px);
     backdrop-filter:blur(8px);
     padding:14px 0;
     box-shadow:0 8px 30px rgba(0,0,0,0.25);
@@ -231,10 +233,9 @@
   .contact-row{display:flex;gap:16px;align-items:flex-start;padding-bottom:20px;border-bottom:1px solid var(--line-light);}
   .contact-row .c-icon{width:22px;height:22px;color:var(--brass-light);flex-shrink:0;margin-top:2px;}
   .contact-row .c-label{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:rgba(231,226,208,.55);}
+  .contact-row .c-label--sub{margin-top:8px;}
   .contact-row .c-value{font-family:var(--display);font-size:18px;margin-top:4px;}
-  .contact-row a.c-value{text-decoration:none;transition:color .2s;}
-  .contact-row a.c-value:hover{color:var(--brass-light);}
-
+  .contact-row .c-value--small{font-size:15px;}
   .map-box{
     border:1px solid var(--line-light);padding:34px;position:relative;overflow:hidden;min-height:260px;
     display:flex;flex-direction:column;justify-content:flex-end;
@@ -293,12 +294,12 @@
     <nav class="mainnav">
       <a href="#sobre">Sobre Nós</a>
       <a href="#servicos">Serviços</a>
-      <a href="#diferenciais">Diferenciais</a>
+      <a href="#diferenciais">Nossa Atuação</a>
       <a href="#docencia">Trajetória Docente</a>
       <a href="#contato">Contato</a>
     </nav>
     <a class="cta-btn" href="https://wa.me/5511972054265" target="_blank" rel="noopener">
-      Fale com o Especialista
+      Fale Conosco
     </a>
     <button class="burger" id="burgerBtn" aria-label="Abrir menu">
       <span></span><span></span><span></span>
@@ -310,7 +311,7 @@
   <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">&times;</button>
   <a href="#sobre">Sobre Nós</a>
   <a href="#servicos">Serviços</a>
-  <a href="#diferenciais">Diferenciais</a>
+  <a href="#diferenciais">Nossa Atuação</a>
   <a href="#docencia">Trajetória Docente</a>
   <a href="#contato">Contato</a>
 </div>
@@ -398,7 +399,7 @@
 <!-- ===== Docência ===== -->
 <section id="docencia" class="section-dark">
   <div class="contour-field" id="contourField2"></div>
-  <div class="wrap" style="position:relative;z-index:2;">
+  <div class="wrap hero-content">
     <div class="section-tag reveal">Autoridade Acadêmica</div>
     <h2 class="section-title reveal">Trajetória Docente &amp; Palestras.</h2>
     <p class="section-intro reveal">Com mais de duas décadas dedicadas ao ensino e à disseminação do conhecimento, nossa experiência acadêmica reforça a didática por trás de cada consultoria e treinamento.</p>
@@ -481,8 +482,8 @@
 <!-- ===== Diferenciais ===== -->
 <section id="diferenciais">
   <div class="wrap">
-    <div class="section-tag reveal">Por que a PaesAmbiental</div>
-    <h2 class="section-title reveal">Diferenciais competitivos.</h2>
+    <div class="section-tag reveal">Nossa Atuação</div>
+    <h2 class="section-title reveal">Nossos pilares.</h2>
     <div class="diff-grid">
       <div class="diff-card reveal">
         <svg class="diff-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 26l8 8 24-24"/><path d="M8 12h16M8 20h10"/></svg>
@@ -507,7 +508,7 @@
 <section id="contato" class="section-dark">
   <div class="wrap">
     <div class="section-tag reveal">Contato</div>
-    <h2 class="section-title reveal">Proteja seu empreendimento com quem entende de engenharia e direito ambiental.</h2>
+    <h2 class="section-title reveal">Consultoria especializada em engenharia ambiental e direito ambiental.</h2>
     <div class="contact-wrap">
       <div class="contact-list reveal">
         <div class="contact-row">
@@ -521,14 +522,16 @@
           <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
           <div>
             <div class="c-label">E-mail Profissional</div>
-            <a class="c-value" href="mailto:rjpaes77@gmail.com">renato.paesambiental@gmail.com</a>
+            <a class="c-value" href="mailto:renato@paesambiental.com.br">renato@paesambiental.com.br</a>
+            <div class="c-label c-label--sub">Recepção de leads</div>
+            <a class="c-value c-value--small" href="mailto:contato@paesambiental.com.br">contato@paesambiental.com.br</a>
           </div>
         </div>
         <div class="contact-row">
           <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.4 14.5L16 10a4 4 0 10-8 0l-4.4 4.5M12 21c4-4 8-8.5 8-13a8 8 0 10-16 0c0 4.5 4 9 8 13z"/><circle cx="12" cy="8" r="2.4"/></svg>
           <div>
             <div class="c-label">Inscrições Profissionais</div>
-            <div class="c-value" style="font-size:15px;">OAB/SP 551.965 &nbsp;·&nbsp; CREA/SP 5063310231</div>
+            <div class="c-value c-value--small">OAB/SP 551.965 &nbsp;·&nbsp; CREA/SP 5063310231</div>
           </div>
         </div>
       </div>
