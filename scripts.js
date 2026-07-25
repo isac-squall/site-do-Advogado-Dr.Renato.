@@ -77,9 +77,17 @@
     container.innerHTML = svg;
   }
 
-  makeContours(document.getElementById('contourField'), 42, '#7C9B82');
-  makeContours(document.getElementById('contourField2'), 17, '#47624F');
-  makeContours(document.getElementById('contourField3'), 88, '#47624F');
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      makeContours(document.getElementById('contourField'), 42, '#7C9B82');
+      makeContours(document.getElementById('contourField2'), 17, '#47624F');
+      makeContours(document.getElementById('contourField3'), 88, '#47624F');
+    });
+  } else {
+    makeContours(document.getElementById('contourField'), 42, '#7C9B82');
+    makeContours(document.getElementById('contourField2'), 17, '#47624F');
+    makeContours(document.getElementById('contourField3'), 88, '#47624F');
+  }
 
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
