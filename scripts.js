@@ -47,7 +47,7 @@
           cio.unobserve(el);
         }
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
     counters.forEach(el => cio.observe(el));
   }
 

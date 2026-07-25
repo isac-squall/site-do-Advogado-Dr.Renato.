@@ -53,6 +53,8 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;}
 .brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:600;font-size:20px;color:var(--paper);letter-spacing:.2px;}
 .brand .mark{width:34px;height:34px;flex-shrink:0;}
 .brand small{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:1.5px;color:var(--brass-light);font-weight:400;text-transform:uppercase;margin-top:2px;}
+.header-credentials{display:flex;align-items:center;gap:16px;font-family:var(--mono);font-size:10px;color:rgba(231,226,208,.6);letter-spacing:.8px;}
+.header-credentials span{color:var(--brass-light);}
 nav.mainnav{display:flex;align-items:center;gap:34px;}
 nav.mainnav a{
   font-size:14px;color:var(--paper);text-decoration:none;opacity:.82;
@@ -284,12 +286,20 @@ nav.mainnav a.active::after{width:100%;}
 .footer-nav a:hover{color:var(--brass-light);}
 .related-services{margin-top:80px;padding-top:60px;border-top:1px solid var(--line);}
 .related-services h3{font-family:var(--display);font-size:24px;margin-bottom:32px;}
+.testimonials-grid{margin-top:64px;display:grid;grid-template-columns:repeat(2,1fr);gap:44px;}
+.testimonial-card{background:var(--paper-2);padding:36px;border:1px solid var(--line);position:relative;}
+.testimonial-card::before{content:'"';font-family:var(--display);font-size:64px;color:var(--brass);opacity:.3;line-height:1;position:absolute;top:20px;left:24px;}
+.testimonial-card .t-content{font-size:15px;line-height:1.75;color:var(--text-soft);margin-bottom:20px;position:relative;z-index:1;padding-top:20px;}
+.testimonial-card .t-author{display:flex;align-items:center;gap:14px;}
+.testimonial-card .t-name{font-family:var(--display);font-weight:600;font-size:16px;color:var(--text);}
+.testimonial-card .t-role{font-family:var(--mono);font-size:11px;color:var(--brass);letter-spacing:.5px;text-transform:uppercase;}
 @media (max-width:920px){
-  nav.mainnav, header .cta-btn{display:none;}
+  nav.mainnav, header .cta-btn, .header-credentials{display:none;}
   .burger{display:flex;}
   .about-grid, .lecture-grid, .contact-wrap, .content-grid{grid-template-columns:1fr;gap:40px;}
   .services-grid, .case-grid, .blog-grid, .material-grid{grid-template-columns:1fr;}
   .diff-grid, .diferenciais-grid{grid-template-columns:1fr;gap:36px;}
+  .testimonials-grid{grid-template-columns:1fr;}
   .seals-row{gap:20px;}
   .cta-banner{flex-direction:column;align-items:flex-start;}
 }
