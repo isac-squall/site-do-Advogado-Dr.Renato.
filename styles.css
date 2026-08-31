@@ -334,4 +334,48 @@ nav.mainnav a.active::after{width:100%;}
   .testimonials-grid{grid-template-columns:1fr;}
   .seals-row{gap:20px;}
   .cta-banner{flex-direction:column;align-items:flex-start;}
+
+  .feature-spotlight{grid-template-columns:1fr;gap:18px;padding:12px 12px 16px;}
+  .feature-image-stack{
+    min-height:0;
+    margin:0 auto;
+    width:100%;
+    max-width:360px;
+    padding-bottom:10px;
+  }
+  .feature-image-main{
+    min-height:330px;
+    height:330px;
+    border-radius:16px;
+    border-width:1px;
+    box-shadow:0 12px 28px rgba(16,38,42,.08);
+  }
+  .feature-image-overlay{
+    position:relative;
+    right:auto;
+    bottom:auto;
+    width:52%;
+    min-width:140px;
+    max-height:170px;
+    margin-top:-50px;
+    margin-left:14px;
+    border-width:2px;
+    border-radius:12px;
+    box-shadow:0 12px 22px rgba(16,38,42,.12);
+  }
+
+  .portrait-card{display:flex;justify-content:center;margin-bottom:18px;}
+  .portrait-frame{
+    width:100%;
+    max-width:min(78vw,380px);
+    aspect-ratio:0.86;
+    padding:8px;
+    margin:0 auto;
+  }
+  .portrait-frame::before{top:6px;left:6px;right:6px;bottom:6px;}
+  .portrait-frame img{
+    object-position:center 18%;
+    transform:scale(1.04);
+  }
+  .portrait-caption{max-width:100%;text-align:center;}
 }
