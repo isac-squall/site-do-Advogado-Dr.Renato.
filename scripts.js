@@ -37,7 +37,11 @@
         if (entry.isIntersecting) {
           const el = entry.target;
           const target = parseInt(el.dataset.target, 10);
-          let cur = 0;
+          let cur = parseInt(el.textContent, 10) || 0;
+          if (cur >= target) {
+            cio.unobserve(el);
+            return;
+          }
           const step = Math.max(1, Math.round(target / 30));
           const t = setInterval(() => {
             cur += step;
@@ -70,7 +74,8 @@
           d += (a === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
         }
         d += 'Z';
-        svg += `<path d="${d}" class="contour-line" style="stroke:${strokeColor};opacity:${0.5 - i * 0.055}"/>`;
+        const colorClass = strokeColor === '#7C9B82' ? 'contour-line-light' : 'contour-line-dark';
+        svg += `<path d="${d}" class="contour-line ${colorClass} contour-line-level-${i}"/>`;
       }
     });
     svg += '</svg>';
